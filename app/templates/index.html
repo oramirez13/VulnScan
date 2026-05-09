@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio | VulnScan{% endblock %}
+
+{% block content %}
+<section>
+  <h2>Top 10 procesos por CPU</h2>
+
+  {% if processes %}
+  <img
+    class="chart-image"
+    src="data:image/png;base64,{{ graph_url }}"
+    alt="Gráfica de uso de CPU"
+  />
+
+  <table>
+    <thead>
+      <tr>
+        <th>PID</th>
+        <th>Nombre</th>
+        <th>CPU (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pid, name, cpu in processes %}
+      <tr>
+        <td>{{ pid }}</td>
+        <td>{{ name }}</td>
+        <td>{{ "%.1f"|format(cpu) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>No se encontraron procesos.</p>
+  {% endif %}
+</section>
+{% endblock %}
