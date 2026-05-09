@@ -12,26 +12,33 @@ VulnScan es una aplicación web en Flask para visualizar el uso de CPU de proces
 ## Requisitos
 
 - Python 3.11+ (recomendado)
-- `flask`
-- `psutil`
-- `matplotlib`
+- `pip`
 
 ## Instalación
 
-1. Crear un entorno virtual:
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/oramirez13/VulnScan.git
+cd VulnScan
+```
+
+2. Crear un entorno virtual:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-2. Instalar dependencias:
+3. Instalar dependencias:
 
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Ejecución
+
+Con el entorno virtual activado, ejecutar:
 
 ```bash
 python app.py
@@ -43,6 +50,12 @@ Luego abrir en el navegador:
 http://127.0.0.1:5000
 ```
 
+## Uso
+
+- `/`: muestra el panel principal con la gráfica y la tabla de los 10 procesos con mayor uso de CPU.
+- `/reporte`: muestra un reporte más amplio con la lista ordenada de procesos.
+- `/grafica`: muestra únicamente la gráfica generada en tiempo real.
+
 ## Estructura relevante
 
 - `app.py`: punto de entrada de la aplicación.
@@ -50,18 +63,9 @@ http://127.0.0.1:5000
 - `app/routes.py`: rutas de la aplicación y generación de datos.
 - `app/templates/`: plantillas HTML reutilizables.
 - `app/static/style.css`: estilos de la interfaz.
+- `requirements.txt`: dependencias necesarias del proyecto.
 
-## Preparado para GitHub
+## Notas
 
 - El proyecto ya incluye `.gitignore` para excluir `.venv/`, `venv/`, `__pycache__/` y archivos compilados.
 - Se recomienda conservar solo un entorno virtual local. En este proyecto la referencia documentada es `.venv/`.
-- Antes de publicar, verifica que no queden carpetas del entorno virtual dentro del commit.
-
-## Flujo sugerido para publicar
-
-```bash
-cd flask/VulnScan
-git init
-git add .
-git commit -m "Preparar proyecto VulnScan para GitHub"
-```
