@@ -1,6 +1,6 @@
 # VulnScan
 
-VulnScan es una aplicación web sencilla en Flask para visualizar el uso de CPU de procesos del sistema.
+VulnScan es una aplicación web en Flask para visualizar el uso de CPU de procesos del sistema.
 
 ## Características
 
