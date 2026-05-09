@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Reporte | VulnScan{% endblock %}
+
+{% block content %}
+<section>
+  <h2>Reporte completo de procesos</h2>
+
+  {% if processes %}
+  <table>
+    <thead>
+      <tr>
+        <th>PID</th>
+        <th>Nombre</th>
+        <th>CPU (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pid, name, cpu in processes %}
+      <tr>
+        <td>{{ pid }}</td>
+        <td>{{ name }}</td>
+        <td>{{ "%.1f"|format(cpu) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>No hay procesos disponibles.</p>
+  {% endif %}
+</section>
+{% endblock %}

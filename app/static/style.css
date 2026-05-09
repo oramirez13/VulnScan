@@ -1,0 +1,82 @@
+body {
+    background-color: #000000;
+    color: #00ff00;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 24px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 2px solid #00ff00;
+    border-radius: 15px;
+    background-color: #111111;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.page-header h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.page-description {
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.actions a {
+    display: inline-block;
+    background-color: #000000;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+}
+
+.actions a:hover {
+    background-color: #00ff00;
+    color: #000000;
+}
+
+h2 {
+    text-align: center;
+}
+
+.chart-image {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #00ff00;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
